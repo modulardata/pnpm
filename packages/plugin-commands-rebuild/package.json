@@ -66,7 +66,7 @@
     "@pnpm/store-connection-manager": "workspace:0.3.0-alpha.1",
     "@pnpm/store-controller-types": "workspace:8.0.0-alpha.1",
     "@pnpm/types": "workspace:5.0.0",
-    "@zkochan/npm-package-arg": "1.0.2",
+    "@zkochan/npm-package-arg": "^2.0.0",
     "camelcase-keys": "6.2.2",
     "common-tags": "1.8.0",
     "dependency-path": "workspace:4.0.6",

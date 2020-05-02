@@ -802,7 +802,7 @@ importers:
       '@pnpm/read-package-json': 'link:../read-package-json'
       '@pnpm/read-project-manifest': 'link:../read-project-manifest'
       '@pnpm/types': 'link:../types'
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': 2.0.0
       archy: 1.0.0
       chalk: 4.0.0
       cli-columns: 3.1.2
@@ -829,7 +829,7 @@ importers:
       '@types/common-tags': 1.8.0
       '@types/ramda': ^0.27.4
       '@types/semver': ^7.1.0
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': ^2.0.0
       archy: 1.0.0
       chalk: 4.0.0
       cli-columns: 3.1.2
@@ -1377,7 +1377,7 @@ importers:
   packages/pkgs-graph:
     dependencies:
       '@pnpm/resolve-workspace-range': 'link:../resolve-workspace-range'
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': 2.0.0
       ramda: 0.27.0
     devDependencies:
       '@types/ramda': 0.27.4
@@ -1386,7 +1386,7 @@ importers:
     specifiers:
       '@pnpm/resolve-workspace-range': 'workspace:1.0.1'
       '@types/ramda': ^0.27.4
-      '@zkochan/npm-package-arg': ^1.0.2
+      '@zkochan/npm-package-arg': ^2.0.0
       better-path-resolve: 1.0.0
       pkgs-graph: 'link:'
       ramda: ^0.27.0
@@ -1800,7 +1800,7 @@ importers:
       '@pnpm/store-connection-manager': 'link:../store-connection-manager'
       '@pnpm/store-controller-types': 'link:../store-controller-types'
       '@pnpm/types': 'link:../types'
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': 2.0.0
       camelcase-keys: 6.2.2
       common-tags: 1.8.0
       dependency-path: 'link:../dependency-path'
@@ -1855,7 +1855,7 @@ importers:
       '@types/ramda': ^0.27.4
       '@types/semver': ^7.1.0
       '@types/sinon': ^9.0.0
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': ^2.0.0
       camelcase-keys: 6.2.2
       common-tags: 1.8.0
       dependency-path: 'workspace:4.0.6'
@@ -2558,7 +2558,7 @@ importers:
       '@pnpm/store-controller-types': 'link:../store-controller-types'
       '@pnpm/symlink-dependency': 'link:../symlink-dependency'
       '@pnpm/types': 'link:../types'
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': 2.0.0
       '@zkochan/rimraf': 1.0.0
       common-tags: 1.8.0
       dependency-path: 'link:../dependency-path'
@@ -2678,7 +2678,7 @@ importers:
       '@types/semver': ^7.1.0
       '@types/sinon': ^9.0.0
       '@types/tape-promise': 4.0.0
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': ^2.0.0
       '@zkochan/rimraf': 1.0.0
       anonymous-npm-registry-client: 0.1.2
       common-tags: 1.8.0
@@ -3896,6 +3896,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9hHFHZTOexP/oge2GMQzPlhdi9IJ+Zgnobh7sNfSdIZepULMM/lNQE4hmkFDC2zk8+OBibtfHbUPulNZI18TQA==
+  /@zkochan/npm-package-arg/2.0.0:
+    dependencies:
+      hosted-git-info: 3.0.4
+      semver: 7.3.2
+      validate-npm-package-name: 3.0.0
+    dev: false
+    engines:
+      node: '>=10.13'
+    resolution:
+      integrity: sha512-v42ycaFkH8tYQfxtmnxvMdC3zRB75lwPyfiRy2Rz7F2pv3gqAsSHXHUYbmU93SzjIiHLNtj5UhoYFZwkZP22yw==
   /@zkochan/rimraf/1.0.0:
     dependencies:
       '@types/glob': 7.1.1
