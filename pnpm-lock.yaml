@@ -2082,7 +2082,7 @@ importers:
       '@pnpm/tabtab': 0.0.1
       '@pnpm/types': 'link:../types'
       '@types/nopt': 3.0.29
-      '@zkochan/libnpx': 11.0.3
+      '@zkochan/libnpx': 12.0.0
       chalk: 4.0.0
       common-tags: 1.8.0
       graceful-fs: 4.2.1
@@ -2198,7 +2198,7 @@ importers:
       '@types/tape-promise': 4.0.0
       '@types/update-notifier': 4.1.0
       '@types/which': 1.3.2
-      '@zkochan/libnpx': 11.0.3
+      '@zkochan/libnpx': ^12.0.0
       '@zkochan/rimraf': 1.0.0
       anonymous-npm-registry-client: 0.1.2
       byline: 5.0.0
@@ -3851,9 +3851,9 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-GeZZ9YNlvveT1CrMqe64s9+5hNF5p9Gj6J+PRQU3OnBS/9c2y5kSFavUZ9YAuoAgxFW8tKGKWIxJK4I6HBSigg==
-  /@zkochan/libnpx/11.0.3:
+  /@zkochan/libnpx/12.0.0:
     dependencies:
-      '@zkochan/npm-package-arg': 1.0.2
+      '@zkochan/npm-package-arg': 2.0.0
       dotenv: 8.2.0
       rimraf: 3.0.2
       safe-buffer: 5.2.0
@@ -3862,9 +3862,9 @@ packages:
       yargs: 15.3.1
     dev: false
     engines:
-      node: '>=8.15'
+      node: '>=10.13'
     resolution:
-      integrity: sha512-pkwTuA8Cd301zhg0Gz35nJ2sxKhGr5lFKFI6UT9ISEedGSYzxATsFlCF41+i/0kZcnZTG1nNlR5XknkZBGryuw==
+      integrity: sha512-u52JZDeDY+UIWk4Z9i5DORnxAy/fg3jWne8C1ErihnFADLQN5eunmyvxmmCiCjU1Jx2v+TQ7T9C1Rtwu1aOJNA==
   /@zkochan/npm-conf/2.0.0:
     dependencies:
       config-chain: 1.1.12
@@ -3888,14 +3888,6 @@ packages:
       node: '>=8.15'
     resolution:
       integrity: sha512-s+Uk93fCpRRNWmiG5RDH7N81TIgQEsokCChy7e/Wcq0fB593eUreIo2U+DkKnMRBqJh8NLJxsJ7HNPw5HMyw2A==
-  /@zkochan/npm-package-arg/1.0.2:
-    dependencies:
-      hosted-git-info: 2.8.8
-      semver: 6.3.0
-      validate-npm-package-name: 3.0.0
-    dev: false
-    resolution:
-      integrity: sha512-9hHFHZTOexP/oge2GMQzPlhdi9IJ+Zgnobh7sNfSdIZepULMM/lNQE4hmkFDC2zk8+OBibtfHbUPulNZI18TQA==
   /@zkochan/npm-package-arg/2.0.0:
     dependencies:
       hosted-git-info: 3.0.4
