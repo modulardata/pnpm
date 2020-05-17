@@ -102,6 +102,7 @@ export interface RequestPackageOptions {
 export type PackageResponse = {
   bundledManifest?: () => Promise<BundledManifest>,
   files?: () => Promise<PackageFilesResponse>,
+  filesIndexFile?: string,
   finishing?: () => Promise<void>, // a package request is finished once its integrity is generated and saved
   body: {
     isLocal: boolean,

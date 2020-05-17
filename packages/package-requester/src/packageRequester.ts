@@ -234,8 +234,9 @@ async function resolveAndFetch (
       },
       bundledManifest: fetchResult.bundledManifest,
       files: fetchResult.files,
+      filesIndexFile: fetchResult.filesIndexFile,
       finishing: fetchResult.finishing,
-    } as PackageResponse
+    }
   } catch (err) {
     throw err
   }
