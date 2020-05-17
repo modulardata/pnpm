@@ -15,7 +15,10 @@ export type PackageFileInfo = {
   size: number,
 }
 
-export type PackageFilesIndex = { files: Record<string, PackageFileInfo> }
+export type PackageFilesIndex = {
+  files: Record<string, PackageFileInfo>,
+  sideEffects?: Record<string, Record<string, PackageFileInfo>>
+}
 
 export default async function (
   cafsDir: string,

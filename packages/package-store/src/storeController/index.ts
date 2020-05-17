@@ -38,12 +38,13 @@ export default async function (
   const impPkg = createImportPackage(initOpts.packageImportMethod)
   const cafsDir = path.join(storeDir, 'files')
   const getFilePathByModeInCafs = _getFilePathByModeInCafs.bind(null, cafsDir)
-  const importPackage: ImportPackageFunction = (to, opts) => {
+  const importPackage: ImportPackageFunction = async (to, opts) => {
     const filesMap = {} as Record<string, string>
     for (const [fileName, fileMeta] of Object.entries(opts.filesResponse.filesIndex)) {
       filesMap[fileName] = getFilePathByModeInCafs(fileMeta.integrity, fileMeta.mode)
     }
-    return impPkg(to, { filesMap, fromStore: opts.filesResponse.fromStore, force: opts.force })
+    await impPkg(to, { filesMap, fromStore: opts.filesResponse.fromStore, force: opts.force })
+    return { isBuilt: false }
   }
 
   return {
@@ -80,7 +81,7 @@ export default async function (
     }
   }
 
-  async function upload (builtPkgLocation: string, opts: {packageId: string, engine: string}) {
+  async function upload (builtPkgLocation: string, opts: {filesIndexFile: string, engine: string}) {
     const filesIndex = await packageRequester.cafs.addFilesFromDir(builtPkgLocation)
     // TODO: move this to a function
     // This is duplicated in @pnpm/package-requester
@@ -96,7 +97,7 @@ export default async function (
           }
         })
     )
-    const cachePath = path.join(storeDir, opts.packageId, 'side_effects', opts.engine)
-    await writeJsonFile(path.join(cachePath, 'integrity.json'), integrity, { indent: undefined })
+    // const cachePath = path.join(storeDir, opts.packageId, 'side_effects', opts.engine)
+    // await writeJsonFile(path.join(cachePath, 'integrity.json'), integrity, { indent: undefined })
   }
 }

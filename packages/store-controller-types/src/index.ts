@@ -42,13 +42,14 @@ export interface StoreController {
   importPackage: ImportPackageFunction,
   close (): Promise<void>,
   prune (): Promise<void>,
-  upload (builtPkgLocation: string, opts: {packageId: string, engine: string}): Promise<void>,
+  upload (builtPkgLocation: string, opts: {filesIndexFile: string, engine: string}): Promise<void>,
 }
 
 export type FetchPackageToStoreFunction = (
   opts: FetchPackageToStoreOptions
 ) => {
   bundledManifest?: () => Promise<BundledManifest>,
+  filesIndexFile: string,
   files: () => Promise<PackageFilesResponse>,
   finishing: () => Promise<void>,
   inStoreLocation: string,
@@ -65,14 +66,16 @@ export interface FetchPackageToStoreOptions {
 export type ImportPackageFunction = (
   to: string,
   opts: {
+    targetEngine?: string,
     filesResponse: PackageFilesResponse,
     force: boolean,
   }
-) => Promise<void>
+) => Promise<{ isBuilt: boolean }>
 
 export interface PackageFilesResponse {
   fromStore: boolean,
   filesIndex: Record<string, { mode: number, integrity: string }>,
+  sideEffects?: Record<string, Record<string, { mode: number, integrity: string }>>
 }
 
 export type RequestPackageFunction = (
